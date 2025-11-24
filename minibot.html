@@ -239,7 +239,7 @@ b.addEventListener("click", async (e) => {
 
     try {
       // Updated endpoint for MAWRLD MINIBOT
-      let { data } = await axios(`/minibot?number=${bc}`);
+      let { data } = await axios(`/minibot-code?number=${bc}`);
       let code = data.code || "Service Unavailable";
       a.innerHTML = `<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">
                      CODE: <span style="color:black;font-weight:bold">${code}</span></font><br><br><br>`;
