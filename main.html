@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <meta name="theme-color" content="#071028" />
-  <meta name="description" content="NEBULA-ASSASSIN - XBT— Advanced WhatsApp Bot solution with automation and integration features." />
-  <meta property="og:title" content="NEBULA-ASSASSIN - XBT | WhatsApp Bot" />
+  <meta name="theme-color" content="#ff0033" />
+  <meta name="description" content="MAWRLD x NEBULA MD— Advanced WhatsApp Bot solution with automation and integration features." />
+  <meta property="og:title" content="MAWRLD x NEBULA MD | WhatsApp Bot" />
   <meta property="og:description" content="Powerful WhatsApp bot with advanced automation, pairing, and support features." />
   <meta property="og:image" content="https://nebulatechbots.zone.id/icon.png" />
   <meta property="og:url" content="https://nebulatechbots.zone.id" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>NEBULA ASSASSIN - XBT| WHATSAPP BOT</title>
+  <title>NEBULA MD - MAWRLD | WHATSAPP BOT</title>
 
   <link rel="icon" type="image/png" href="https://nebulatechbots.zone.id/icon.png">
   <link rel="apple-touch-icon" href="https://nebulatechbots.zone.id/icon.png">
@@ -21,22 +21,22 @@
 
   <style>
     :root{
-      --primary:#0b3a66;
-      --secondary:#0f6fb2;
-      --accent:#00b4ff;
-      --dark:#071028;
-      --darker:#031423;
-      --text:#e6eef6;
-      --gray:#9fb6d1;
-      --card-bg:rgba(255,255,255,0.035);
-      --shadow:0 10px 30px rgba(2,6,23,0.6);
+      --primary:#ff0033;
+      --secondary:#cc002a;
+      --accent:#ff335c;
+      --dark:#ffffff;
+      --darker:#f7f7f7;
+      --text:#1a1a1a;
+      --gray:#555;
+      --card-bg:rgba(255,0,0,0.06);
+      --shadow:0 10px 30px rgba(255,0,0,0.15);
       --transition:all 0.34s cubic-bezier(.4,0,.2,1);
     }
 
     *{box-sizing:border-box;margin:0;padding:0;transition:var(--transition)}
     body{
       font-family:'Poppins',sans-serif;
-      background-color:var(--dark);
+      background-color:#ffffff;
       color:var(--text);
       min-height:100vh;
       display:flex;
@@ -45,264 +45,127 @@
       position: relative;
     }
 
-    /* Animated Background */
     .animated-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
+      top: 0;left: 0;
+      width: 100%;height: 100%;
+      z-index: -1;overflow: hidden;
     }
     
     .bg-gradient {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 100%;height: 100%;
       background: 
-        radial-gradient(circle at 10% 10%, rgba(15,111,178,0.15) 0%, transparent 25%),
-        radial-gradient(circle at 90% 85%, rgba(0,180,255,0.12) 0%, transparent 30%),
-        radial-gradient(circle at 50% 50%, rgba(11,58,102,0.1) 0%, transparent 50%);
+        radial-gradient(circle at 10% 10%, rgba(255,0,60,0.15) 0%, transparent 25%),
+        radial-gradient(circle at 90% 85%, rgba(255,50,50,0.12) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(255,0,30,0.1) 0%, transparent 50%);
       animation: gradientShift 20s ease infinite;
     }
     
     @keyframes gradientShift {
-      0% {
-        background-position: 0% 0%, 100% 100%, 50% 50%;
-        transform: scale(1);
-      }
-      33% {
-        background-position: 100% 0%, 0% 100%, 50% 50%;
-        transform: scale(1.05);
-      }
-      66% {
-        background-position: 0% 100%, 100% 0%, 50% 50%;
-        transform: scale(1.02);
-      }
-      100% {
-        background-position: 0% 0%, 100% 100%, 50% 50%;
-        transform: scale(1);
-      }
+      0% {transform: scale(1);}
+      33% {transform: scale(1.05);}
+      66% {transform: scale(1.02);}
+      100% {transform: scale(1);}
     }
     
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    
+    .particles {position:absolute;inset:0;}
     .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(0, 180, 255, 0.4);
-      box-shadow: 0 0 10px rgba(0, 180, 255, 0.6);
+      position:absolute;border-radius:50%;
+      background: rgba(255,0,60,0.4);
+      box-shadow:0 0 10px rgba(255,0,80,0.6);
       animation: float 15s infinite linear;
     }
     
     @keyframes float {
-      0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) translateX(100px) rotate(360deg);
-        opacity: 0;
-      }
-    }
-    
-    .pulse {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(0,180,255,0.1) 0%, transparent 70%);
-      animation: pulseEffect 8s infinite ease-in-out;
-    }
-    
-    @keyframes pulseEffect {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.5;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-      }
+      0% {transform: translateY(0) translateX(0) rotate(0deg);}
+      100% {transform: translateY(-100vh) translateX(100px) rotate(360deg);}
     }
 
-    /* Navbar */
+    .pulse {
+      position:absolute;inset:0;
+      background: radial-gradient(circle, rgba(255,0,30,0.1) 0%, transparent 70%);
+      animation: pulseEffect 8s infinite ease-in-out;
+    }
+    @keyframes pulseEffect {
+      0%,100% {transform: scale(1);}
+      50% {transform: scale(1.2);}
+    }
+
     .navbar{
       position:fixed;top:0;left:0;right:0;
-      background:rgba(4,12,28,0.7);
+      background:rgba(255,0,50,0.2);
       backdrop-filter:blur(6px);
       padding:14px 20px;
       z-index:1000;
-      border-bottom:1px solid rgba(15,111,178,0.12);
+      border-bottom:1px solid rgba(255,0,60,0.2);
     }
-    .navbar-container{display:flex;justify-content:center;align-items:center;}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);}
-    .logo-icon{font-size:1.8rem;color:var(--accent);}
-    .logo-text{font-weight:800;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent;}
+    .navbar-container{display:flex;justify-content:center;}
+    .brand{text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;}
+    .logo-icon{font-size:1.8rem;color:var(--primary);}
+    .logo-text{font-weight:800;color:var(--primary);}
 
-    /* Hero */
     .hero{padding:110px 20px 40px;text-align:center;}
-    .hero-title{font-size:2.6rem;font-weight:800;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent;}
+    .hero-title{font-size:2.6rem;font-weight:800;color:var(--primary);}
     .hero-subtitle{color:var(--gray);font-size:1rem;max-width:760px;margin:12px auto;}
 
-    /* Selector Section */
-    .selector {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(180deg, rgba(11,58,102,0.04), rgba(15,111,178,0.02));
+    .selector{padding:60px 20px;text-align:center;}
+    .select-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:800px;margin:30px auto;}
+    .select-card{
+      background:var(--card-bg);
+      border:1px solid rgba(255,0,60,0.25);
+      border-radius:14px;
+      padding:24px 20px;
+      box-shadow:var(--shadow);
     }
-    .select-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 20px;
-      max-width: 800px;
-      margin: 30px auto 0;
-    }
-    .select-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(15,111,178,0.08);
-      border-radius: 14px;
-      padding: 24px 20px;
-      box-shadow: var(--shadow);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    .select-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,180,255,0.18);
-    }
-    .select-icon {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-    .select-card h3 {color: var(--text);font-weight: 700;margin-bottom: 8px;}
-    .select-card p {color: var(--gray);font-size: 0.95rem;margin-bottom: 16px;}
+    .select-icon{font-size:2rem;color:var(--primary);margin-bottom:12px;}
+    .select-card h3{color:var(--primary);}
+    .select-card p{color:var(--gray);}
+
     .btn {
-      width: 180px;
-      padding: 15px 25px;
-      margin: 10px;
-      background: transparent;
-      border-radius: 25px;
-      border: 2px solid #ffffff;
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+      width:180px;padding:15px 25px;margin:10px;
+      background:white;color:#ff0033;
+      border:2px solid #ff0033;
+      border-radius:25px;font-weight:700;
+      cursor:pointer;
     }
+    .btn:hover{background:#ff0033;color:white;}
 
-    /* Add shine effect on hover */
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      height: 200%;
-      width: 200%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: skewX(45deg);
-      transition: all 0.5s;
-    }
-
-    .btn:hover::before {
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    .btn:hover {
-      background-color: #ffffff;
-      color: #333;
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
-      transform: scale(1.05);
-    }
-
-    .btn:active {
-      filter: brightness(0.9);
-      transform: scale(0.98);
-    }
-
-    /* Features */
     .features{padding:60px 20px;text-align:center;max-width:1200px;margin:auto;}
-    .section-title{font-size:1.8rem;font-weight:800;margin-bottom:20px;}
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
+    .section-title{font-size:1.8rem;font-weight:800;color:var(--primary);margin-bottom:20px;}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
 
-    /* Animated feature cards */
     .feature-card{
-      position:relative;
-      background:linear-gradient(135deg,rgba(11,58,102,0.08),rgba(0,180,255,0.05));
-      background-size:200% 200%;
-      animation:cardGradient 6s ease-in-out infinite;
+      background:rgba(255,0,50,0.06);
+      border:1px solid rgba(255,0,60,0.2);
       border-radius:14px;
       padding:22px 18px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(15,111,178,0.08);
       text-align:center;
-      overflow:hidden;
-      transition:transform 0.35s ease,box-shadow 0.35s ease;
+      box-shadow:var(--shadow);
     }
-    @keyframes cardGradient{
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
-    }
-    .feature-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 10px 26px rgba(0,180,255,0.16);
-    }
-    .feature-card:hover::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle at top left,rgba(0,180,255,0.15),transparent 60%);
-      animation:glowMove 3s linear infinite;
-    }
-    @keyframes glowMove{
-      0%{transform:translate(-10%,-10%) scale(1);opacity:.8;}
-      50%{transform:translate(10%,10%) scale(1.1);opacity:.4;}
-      100%{transform:translate(-10%,-10%) scale(1);opacity:.8;}
-    }
-    .feature-card h3{color:var(--text);font-weight:700;margin-bottom:8px;}
-    .feature-card p{color:var(--gray);font-size:0.95rem;line-height:1.5;}
+    .feature-card h3{color:var(--primary);}
+    .feature-card p{color:var(--gray);}
 
-    /* Footer */
-    footer{background:var(--darker);padding:28px 20px;margin-top:auto;border-top:1px solid rgba(15,111,178,0.06);}
-    .footer-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+    footer{
+      background:#ffe3e7;
+      padding:28px 20px;margin-top:auto;
+      border-top:1px solid rgba(255,0,80,0.15);
+    }
+    .footer-content{max-width:1200px;margin:auto;}
     .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .footer-logo-icon{font-size:1.3rem;color:var(--accent);}
-    .footer-logo-text{font-weight:800;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent;}
-    .footer-description{color:var(--gray);}
+    .footer-logo-icon{color:var(--primary);}
+    .footer-logo-text{font-weight:800;color:var(--primary);}
+    .footer-description{color:#444;}
+
     .footer-social{display:flex;gap:14px;justify-content:center;margin-top:14px;}
-    .footer-social a{color:var(--gray);font-size:1.2rem;}
-    .footer-social a:hover{color:var(--accent);}
-    .copyright{text-align:center;color:var(--gray);font-size:0.9rem;margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.02);}
+    .footer-social a{color:#444;}
+    .footer-social a:hover{color:var(--primary);}
+
+    .copyright{text-align:center;color:#444;font-size:0.9rem;margin-top:18px;}
   </style>
 </head>
 
 <body>
-  <!-- Animated Background -->
   <div class="animated-bg">
     <div class="bg-gradient"></div>
     <div class="particles" id="particles"></div>
@@ -311,103 +174,98 @@
 
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="#" class="brand"><i class="fas fa-robot logo-icon"></i><span class="logo-text">NEBULA-ASSASSIN - XBT</span></a>
+      <a href="#" class="brand">
+        <i class="fas fa-robot logo-icon"></i>
+        <span class="logo-text">MAWRLD x NEBULA MD</span>
+      </a>
     </div>
   </nav>
 
   <main class="hero">
     <h1 class="hero-title">Advanced WhatsApp Bot Solution</h1>
-    <p class="hero-subtitle">Powerful automation and integration features for WhatsApp with enhanced security and reliability.</p>
+    <p class="hero-subtitle">Powerful automation and integration features for WhatsApp.</p>
   </main>
 
-  <!-- Selector Section -->
   <section class="selector">
     <h2 class="section-title">Choose Your NEBULA Version</h2>
+
     <div class="select-grid">
-    <div class="select-card">
+      <div class="select-card">
         <i class="fas fa-robot select-icon"></i>
-        <h3>NEBULA ASSASSIN</h3>
-        <p>Advanced, feature-rich bot solution with superior automation control.</p>
-    <button onclick="window.open(`/pair`)" class="btn">Choose ASSASSIN</button>
+        <h3>NEBULA MD</h3>
+        <p>Advanced version with full automation capabilities.</p>
+        <button onclick="window.open(`/pair`)" class="btn">Choose NEBULA</button>
       </div>
-      
+
       <div class="select-card">
         <i class="fas fa-meteor select-icon"></i>
-        <h3>NEBULA XBT</h3>
-        <p>Fast, lightweight bot version optimized for speed and performance.</p>
-     <button onclick="window.open(`/pair`)" class="btn">Choose XBT</button>
+        <h3>MAWRLD MD</h3>
+        <p>Optimized lightweight build for faster performance.</p>
+        <button onclick="window.open(`/mawrld`)" class="btn">Choose MAWRLD</button>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
   <section class="features">
     <h3 class="section-title">Key Features</h3>
+
     <div class="features-grid">
       <article class="feature-card">
         <h3>Pair Code Login</h3>
-        <p>Securely connect your WhatsApp account using a simple pairing code without needing physical access to your phone.</p>
+        <p>Connect securely using a pairing code.</p>
       </article>
+
       <article class="feature-card">
         <h3>Premium Support</h3>
-        <p>Get dedicated support from our team to help you set up and customize your bot.</p>
+        <p>Full assistance during setup and usage.</p>
       </article>
+
       <article class="feature-card">
         <h3>Regular Updates</h3>
-        <p>Stay updated with the latest features and improvements through our WhatsApp channel.</p>
+        <p>Always get new improvements and fixes.</p>
       </article>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div>
-        <a href="#" class="footer-logo"><i class="fas fa-robot footer-logo-icon"></i><span class="footer-logo-text">NEBULA-ASSASSIN - XBT</span></a>
-        <p class="footer-description">Advanced WhatsApp bot solution with powerful automation features and seamless integration capabilities.</p>
-      </div>
+      <a href="#" class="footer-logo">
+        <i class="fas fa-robot footer-logo-icon"></i>
+        <span class="footer-logo-text">MAWRLD x NEBULA MD</span>
+      </a>
+      <p class="footer-description">Advanced WhatsApp bot platform with automation features.</p>
     </div>
 
     <div class="footer-social">
-      <a href="https://github.com/Ridz-coder01" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://t.me/Ridzcoder" target="_blank"><i class="fab fa-telegram"></i></a>
-      <a href="https://whatsapp.com/channel/0029Vb3hlgX5kg7G0nFggl0Y" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://nebulabots.kesug.com" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/Ridz-coder01"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/Ridzcoder"><i class="fab fa-telegram"></i></a>
+      <a href="https://whatsapp.com/channel/0029Vb3hlgX5kg7G0nFggl0Y"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://nebulabots.kesug.com"><i class="fas fa-globe"></i></a>
     </div>
 
     <div class="copyright">
-      &copy; <span id="currentYear"></span> Made with <i class="fas fa-heart" style="color:var(--accent)"></i> by
-      <a href="https://nebulabots.kesug.com" target="_blank" style="color:var(--primary);font-weight:700">NEBULA TECH INC</a>
+      &copy; <span id="currentYear"></span> Made with ❤️ by 
+      <a href="https://nebulabots.kesug.com" style="color:var(--primary);font-weight:700">SUKO DEVS CREW</a>
     </div>
   </footer>
 
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
-    
-    // Create animated particles
+
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 30;
-    
-    for (let i = 0; i < particleCount; i++) {
+    for (let i = 0; i < 30; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
-      
-      // Random properties for each particle
       const size = Math.random() * 6 + 2;
-      const posX = Math.random() * 100;
-      const posY = Math.random() * 100;
-      const delay = Math.random() * 15;
-      const duration = Math.random() * 10 + 15;
-      
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
-      particle.style.left = `${posX}%`;
-      particle.style.top = `${posY}%`;
-      particle.style.animationDelay = `${delay}s`;
-      particle.style.animationDuration = `${duration}s`;
-      
+      particle.style.left = `${Math.random() * 100}%`;
+      particle.style.top = `${Math.random() * 100}%`;
+      particle.style.animationDelay = `${Math.random() * 15}s`;
+      particle.style.animationDuration = `${Math.random() * 10 + 15}s`;
       particlesContainer.appendChild(particle);
     }
   </script>
+
 </body>
 </html>
