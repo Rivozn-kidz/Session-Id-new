@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>MAWRLD MD  PAIR CODE | WHATSAPP CONNECT</title>
+  <meta name="theme-color" content="#071028" />
+  <link rel="icon" href="https://nebulabots.kesug.com/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --primary:#0b3a66;
+      --secondary:#0f6fb2;
+      --accent:#7b2ff7;
+      --accent2:#f107a3;
+      --dark:#071028;
+      --darker:#031423;
+      --text:#e6eef6;
+      --gray:#9fb6d1;
+      --card-bg:rgba(255,255,255,0.04);
+      --shadow:0 10px 30px rgba(2,6,23,0.6);
+      --transition:all 0.3s ease;
+    }
+
+    * {box-sizing:border-box;margin:0;padding:0;transition:var(--transition);}
+
+body {
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(135deg, white, red);
+  color: #000;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding: 20px;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(255,0,0,0.15), transparent 20%),
+    radial-gradient(circle at 80% 90%, rgba(255,0,0,0.15), transparent 20%);
+  animation: nebulaFlow 10s ease-in-out infinite alternate;
+  background-attachment: fixed;
+}
+
+@keyframes nebulaFlow {
+  0% {background-position: 10% 10%, 80% 90%;}
+  100% {background-position: 20% 20%, 70% 80%;}
+}
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 20px;
+      background: rgba(255, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,0,0,0.25);
+      z-index: 1000;
+      text-align: center;
+    }
+    .navbar .brand {
+      color: red;
+      font-weight: 800;
+      font-size: 1.2rem;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    /* Pair Card */
+    .pair-card {
+      background: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,0,0,0.3);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: var(--shadow);
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+      backdrop-filter: blur(10px);
+    }
+
+@keyframes fadeIn {from {opacity:0;transform:translateY(20px);}to {opacity:1;transform:translateY(0);}}
+
+    .pair-card h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: red;
+      margin-bottom: 6px;
+    }
+
+    .pair-card p {
+      color: #000;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      color: #000;
+      font-weight: 600;
+      text-align: left;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid red;
+      background: rgba(255,255,255,0.7);
+      color: #000;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .pair-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(90deg, red, darkred);
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .channel-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,0,0,0.25);
+      color: #000;
+      border-radius: 25px;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .channel-btn i {color: #25D366;}
+
+    /* Footer */
+    footer {
+      background: rgba(255,0,0,0.2);
+      padding: 28px 20px;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255,0,0,0.2);
+      width: 100%;
+      text-align: center;
+    }
+    .footer-social a {
+      color: #000;
+      font-size: 1.2rem;
+    }
+    .copyright {
+      color: #000;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="#" class="brand"><i class="fas fa-robot"></i> MAWRLD MD</a>
+  </nav>
+
+  <div class="pair-card">
+    <a href="https://whatsapp.com/channel/0029VasAQRiGk1FtXGUz5T2V" target="_blank" class="channel-btn">
+      <i class="fab fa-whatsapp"></i> Channel
+    </a>
+    <h1>MAWRLD MD PAIRING CODE</h1>
+    <p>Enter your WhatsApp number without the + sign</p>
+
+    <label for="number">Phone Number</label>
+    <input type="text" id="number" placeholder="e.g., 256xxxxxxxxxx" />
+    <button id="submit" class="pair-btn">GET CODE</button>
+
+    <div id="pair" style="margin-top:20px;"></div>
+  </div>
+
+  <footer>
+    <div class="footer-social">
+      <a href="https://github.com/Ridz-coder01" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/Ridzcoder" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://whatsapp.com/channel/0029VasAQRiGk1FtXGUz5T2V" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://nebulatechbots.zone.id" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; 2024 - <span id="year"></span> SUKO DEVS CREW — All Rights Reserved
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+let a = document.getElementById("pair");
+let b = document.getElementById("submit");
+let c = document.getElementById("number");
+
+async function Copy() {
+  let text = document.getElementById("copy").innerText;
+  let obj = document.getElementById("copy");
+  await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+  obj.innerText = "COPIED";
+  obj.style = "color:blue;font-weight:bold";
+  setTimeout(() => {
+    obj.innerText = text;
+    obj.style = "color:black;font-weight:bold";
+  }, 500);
+}
+
+b.addEventListener("click", async (e) => {
+  e.preventDefault();
+  if (!c.value) {
+    a.innerHTML = '<a style="color:black;font-weight:bold">Enter your WhatsApp number with a country code</a><br><br>';
+  } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+    a.innerHTML = '<a style="color:black;font-weight:bold">Invalid number format</a><br><br>';
+  } else {
+    const bc = c.value.replace(/[^0-9]/g, "");
+    let bb = "";
+    let bbc = "";
+    const cc = bc.split('');
+    cc.map(a => {
+      bbc += a;
+      if (bbc.length == 3) bb += " " + a;
+      else if (bbc.length == 8) bb += " " + a;
+      else bb += a;
+    });
+
+    c.type = "text";
+    c.value = "+" + bb;
+    c.style = "color:black;font-size:20px";
+    a.innerHTML = '<a style="color:black;font-weight:bold">Please wait for some time</a><br><br>';
+
+    try {
+      // Updated endpoint for Mawrld MD
+      let { data } = await axios(`/mawrld-code?number=${bc}`);
+      let code = data.code || "Service Unavailable";
+      a.innerHTML = `<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">
+                     CODE: <span style="color:black;font-weight:bold">${code}</span></font><br><br><br>`;
+    } catch (err) {
+      a.innerHTML = '<a style="color:red;font-weight:bold">Error connecting to server</a><br><br>';
+    }
+  }
+});
+</script>
+
+</body>
+</html>
