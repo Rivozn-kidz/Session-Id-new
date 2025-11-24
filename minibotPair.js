@@ -557,9 +557,7 @@ function setupCommandHandlers(socket, number) {
                 }, { quoted: msg });
                 break;
               }
-
-          case 'menu': {
-
+case 'menu': {
 
     let menuText = `
 ╭────────❒ *MAWRLD MINIBOT* ❒
@@ -608,29 +606,33 @@ function setupCommandHandlers(socket, number) {
 🚀 *Powered by Rɪᴅᴢ Cᴏᴅᴇʀ | Rivozn kidz*
 `;
 
-                await socket.sendMessage(from, {
-                    image: { url: config.RCD_IMAGE_PATH },
-               await socket.sendMessage(from, {
-                    image: { url: config.RCD_IMAGE_PATH },
-                    caption: formatMessage(
-                        '𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙸𝙽𝙸𝙱𝙾𝚃',
-   menuText,
-                        '𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙸𝙽𝙸𝙱𝙾𝚃 
-                    ),
-                    contextInfo: {
-                        mentionedJid: [msg.key.participant || sender],
-                        forwardingScore: 999,
-                        isForwarded: true,
-                        forwardedNewsletterMessageInfo: {
-                            newsletterJid: (config.NEWSLETTER_JID || '').trim(),
-                            newsletterName: 'I AM MAWRLD MINIBOT',
-                            serverMessageId: 143
-                        }
-                    }
-                }, { quoted: verifiedContact });
+    // FIRST MESSAGE (image only)
+    await socket.sendMessage(from, {
+        image: { url: config.RCD_IMAGE_PATH }
+    });
 
-                break;
-              }
+    // SECOND MESSAGE (image + caption + context)
+    await socket.sendMessage(from, {
+        image: { url: config.RCD_IMAGE_PATH },
+        caption: formatMessage(
+            '𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙸𝙽𝙸𝙱𝙾𝚃',
+            menuText,
+            '𝙱𝚁𝙾𝚄𝙶𝙷𝚃 𝚃𝙾 𝚈𝙾𝚄 𝙱𝚈 𝙼𝙰𝚆𝚁𝙻𝙳 𝙼𝙸𝙽𝙸𝙱𝙾𝚃'
+        ),
+        contextInfo: {
+            mentionedJid: [msg.key.participant || sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: (config.NEWSLETTER_JID || '').trim(),
+                newsletterName: 'I AM MAWRLD MINIBOT',
+                serverMessageId: 143
+            }
+        }
+    }, { quoted: verifiedContact });
+
+    break;
+}
 
               case 'fc': {
                 if (args.length === 0) {
