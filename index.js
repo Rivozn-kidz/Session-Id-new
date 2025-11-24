@@ -16,8 +16,8 @@ app.get('/pair', (req, res) => {
   res.sendFile(path.join(__dirname, 'pair.html'));
 });
 
-app.get('/xbt', (req, res) => {
-  res.sendFile(path.join(__dirname, 'xbt.html'));
+app.get('/mawrld', (req, res) => {
+  res.sendFile(path.join(__dirname, 'mawrld.html'));
 });
 
 app.use(bodyParser.json());
