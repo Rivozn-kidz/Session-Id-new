@@ -9,7 +9,7 @@
      "restart": "pm2 restart NEBULA"
     },
   "dependencies": {
-       "baileys": "github: rivonz-kidz/MAWRLD-Baileys",
+       "baileys": "github: Rivozn-kidz/MAWRLD-Baileys",
     "qrcode": "^1.5.4",
     "awesome-phonenumber": "^7.2.0",
     "pino": "^9.6.0",
