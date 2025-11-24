@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8000;
 let code = require('./pair');
 let mawrldCode = require('./mawrldPair');
-let minibotCode = require('./minibot');
+let minibotCode = require('./minibotPair');
 require('events').EventEmitter.defaultMaxListeners = 500;
 
 app.use('/code', code);
