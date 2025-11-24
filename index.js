@@ -5,10 +5,13 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 8000;
 let code = require('./pair');
 let mawrldCode = require('./mawrldPair');
+let minibotCode = require('./minibot');
 require('events').EventEmitter.defaultMaxListeners = 500;
 
 app.use('/code', code);
 app.use('/mawrld-code', mawrldCode);
+app.use('/minibot', minibot);
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'main.html'));
@@ -20,6 +23,9 @@ app.get('/pair', (req, res) => {
 
 app.get('/mawrld', (req, res) => {
   res.sendFile(path.join(__dirname, 'mawrld.html'));
+});
+app.get('/minibot', (req, res) => {
+  res.sendFile(path.join(__dirname, 'minibot.html'));
 });
 
 app.use(bodyParser.json());
