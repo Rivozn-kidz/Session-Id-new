@@ -1,19 +1,22 @@
 {
-"name": "Nebula-assassin",
-    "version": "0.0.1",
-    "description": "A multi functional whatsapp bot Web paircode.",
-    "main": "server.js",
-    "scripts": {
-      "start": "pm2 start index.js --deep-monitoring --attach --name NEBULA",
-      "stop": "pm2 stop NEBULA",
-     "restart": "pm2 restart NEBULA"
-    },
+  "name": "Nebula-assassin",
+  "version": "1.0.0",
+  "description": "A multi functional whatsapp bot Web paircode.",
+  "main": "server.js",
+
+  "scripts": {
+    "start": "pm2 start index.js --deep-monitoring --attach --name NEBULA",
+    "stop": "pm2 stop NEBULA",
+    "restart": "pm2 restart NEBULA",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
   "dependencies": {
-       "baileys": "github:Rivozn-kidz/MAWRLD-Baileys",
+    "baileys": "github:Rivozn-kidz/MAWRLD-Baileys",
     "qrcode": "^1.5.4",
     "awesome-phonenumber": "^7.2.0",
     "pino": "^9.6.0",
-    "phone" : "^3.1.56",
+    "phone": "^3.1.56",
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "path": "^0.12.7",
@@ -22,6 +25,37 @@
     "rimraf": "^6.0.1",
     "@eslint/config-array": "^0.19.1",
     "@eslint/object-schema": "^2.1.5",
-    "eslint": "^9.17.0"
-   }
+    "eslint": "^9.17.0",
+
+    "fs-extra": "^11.2.0",
+    "jimp": "^0.16.1",
+    "mongoose": "^8.0.3",
+    "child_process": "^1.0.2",
+    "denethdev-ytmp3": "1.0.3",
+    "cheerio": "1.1.0",
+    "ruhend-scraper": "9.0.1",
+    "yt-search": "2.12.1",
+    "node-fetch": "3.3.2",
+    "sharp": "0.34.1",
+    "fs": "0.0.1-security",
+    "file-type": "21.0.0",
+    "axios": "^1.2.5",
+    "dotenv": "^16.4.5",
+    "moment-timezone": "^0.6.0"
+  },
+
+  "engines": {
+    "node": ">=18.x"
+  },
+
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "multi-device",
+    "baileys",
+    "MAWRLD-MD"
+  ],
+
+  "author": "Ridz Coder",
+  "license": "MIT"
 }
