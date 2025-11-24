@@ -10,7 +10,7 @@ require('events').EventEmitter.defaultMaxListeners = 500;
 
 app.use('/code', code);
 app.use('/mawrld-code', mawrldCode);
-app.use('/minibot', minibotCode);
+app.use('/minibot-code', minibotCode);
 
 
 app.get('/', (req, res) => {
